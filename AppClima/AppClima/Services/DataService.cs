@@ -14,7 +14,7 @@ namespace AppClima.Services
         public static async Task<Tempo> GetPrevisaoDoTempo(string cidade)
         {
             string ApiKey = "e433a4de85ee61708dd1cbb86fb8413e";
-            string ApiUrl = "http://api.weathermap.org/data/2.5/weather?q=" + cidade + "&units=metric&appid=" + ApiKey;
+            string ApiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric&appid=" + ApiKey;
 
             dynamic resultado = await getDataFromService(ApiUrl).ConfigureAwait(false);
 
