@@ -25,6 +25,7 @@ namespace AppClima
             {
                 if (!String.IsNullOrEmpty(cidadeEntry.Text))
                 {
+                    btnPrevisao.Text = "Carregando...";
                     Tempo previsaoDoTempo = await DataService.GetPrevisaoDoTempo(cidadeEntry.Text);
                     this.BindingContext = previsaoDoTempo;
                     btnPrevisao.Text = "Nova Previsão";
